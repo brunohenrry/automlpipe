@@ -1,0 +1,42 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="automlpipe",
+    version="0.2.0",
+    packages=find_packages(),
+    install_requires=[
+        "pandas>=1.3.0",
+        "numpy>=1.21.0",
+        "scikit-learn>=1.0.0",
+        "xgboost>=1.5.0",
+        "lightgbm>=3.3.0",
+        "skopt>=0.9.0",
+        "matplotlib>=3.4.0",
+        "seaborn>=0.11.0",
+        "joblib>=1.0.0",
+        "imbalanced-learn>=0.8.0",
+        "fastapi>=0.68.0",
+        "uvicorn>=0.15.0",
+        "reportlab>=3.6.0",
+        "dask>=2021.10.0",
+        "click>=8.0.0"
+    ],
+    entry_points={
+        'console_scripts': [
+            'automlpipe=automlpipe.cli:main'
+        ]
+    },
+    author="Henry",
+    author_email="your.email@example.com",
+    description="A Python library for automated Machine Learning pipelines",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/brunohenrry/automlpipe",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.8",
+    include_package_data=True
+)
